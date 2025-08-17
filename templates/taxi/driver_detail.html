@@ -1,6 +1,6 @@
 {% extends "base.html"  %}
 {% block content %}
-<h1> {{ driver.username }} is owener of:</h1>
+<h1> {{ driver.username }} is owner of:</h1>
   {% if driver.cars.all %}
     <ul>
     {% for car in driver.cars.all %}

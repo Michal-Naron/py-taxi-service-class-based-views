@@ -43,11 +43,10 @@ class DriverListView(generic.ListView):
     # queryset = Driver.objects.select_related("cars")
 
 
-class DriverDetailView(generic.ListView):
+class DriverDetailView(generic.DetailView):
     model = Driver
-    context_object_name = "cars"
-    template_name = "driver_detail.html"
-    def get_queryset(self):
-        username = self.kwargs.get("slug")
-        return  Driver.objects.get(username = username).cars.all()
+    # context_object_name = "cars"
+    template_name = "taxi/driver_detail.html"
+    slug_field = "username"
+    slug_url_kwarg = "slug"
 
