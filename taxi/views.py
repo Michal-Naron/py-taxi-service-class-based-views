@@ -14,6 +14,7 @@ def index(request):
 
     return render(request, "taxi/index.html", context=context)
 
+
 class ManufacturerListView(generic.ListView):
     model = Manufacturer
     queryset = Manufacturer.objects.all().order_by("name")
@@ -49,4 +50,3 @@ class DriverDetailView(generic.DetailView):
     template_name = "taxi/driver_detail.html"
     slug_field = "username"
     slug_url_kwarg = "slug"
-
