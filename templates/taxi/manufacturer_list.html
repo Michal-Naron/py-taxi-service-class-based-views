@@ -2,11 +2,11 @@
 {% block content %}
   <h1>List of manufacturers</h1>
 {% if manufacturer_list %}
-  <ul>
+  <table>
     {% for manufacturer in manufacturer_list %}
-      <li>{{ manufacturer.name }}</li>
+      <tr> <td>{{ manufacturer.name }}</td></tr>
     {% endfor %}
-  </ul>
+  </table>
 {% else %}
   <p>There aren't any Manufacturers</p>
 {% endif %}

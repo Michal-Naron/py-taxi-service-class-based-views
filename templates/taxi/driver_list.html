@@ -2,11 +2,11 @@
 {% block content %}
   <h1>List of drivers</h1>
   {% if driver_list %}
-    <ul>
+    <table>
     {% for driver in driver_list %}
-    <li><a href="{{ driver.get_driver_url }}">{{driver.username}}</a></li>
+    <tr> <td><a href="{{ driver.get_driver_url }}">{{driver.username}} {{ driver.license_number }}</a></td></tr>
     {% endfor %}
-    </ul>
+    </table>
     {% else %}
     <p>There aren't any drivers</p>
   {% endif %}
